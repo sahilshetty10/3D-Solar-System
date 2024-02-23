@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Solar System Demo</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Linking css file -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Using bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSSGram -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css"
+    />
+  </head>
+  <body>
+    <!-- NavBar with Bootstrap -->
+    <header>
+      <nav class="navbar navbar-expand bg-dark">
+        <a href="./index.html" class="nav-brand mx-4 p-1"
+          ><img
+            src="assets/logo_outline.svg"
+            alt="Logo"
+            width="50px"
+            height="50px"
+        /></a>
+        <div class="nav-item dropdown">
+          <button
+            class="btn btn-dark dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Planets
+          </button>
+          <ul class="dropdown-menu" data-bs-theme="dark">
+            <li><a class="dropdown-item" href="./mercury.html">Mercury</a></li>
+            <li><a class="dropdown-item" href="./venus.html">Venus</a></li>
+            <li><a class="dropdown-item" href="./earth.html">Earth</a></li>
+            <li><a class="dropdown-item" href="./mars.html">Mars</a></li>
+            <li><a class="dropdown-item" href="./jupiter.html">Jupiter</a></li>
+            <li><a class="dropdown-item" href="./saturn.html">Saturn</a></li>
+            <li><a class="dropdown-item" href="./uranus.html">Uranus</a></li>
+            <li><a class="dropdown-item" href="./neptune.html">Neptune</a></li>
+            <li><a class="dropdown-item" href="./pluto.html">Pluto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Loading screen -->
+    <div class="loading-screen">
+      <span class="loader"></span>
+    </div>
+    <!-- main -->
+    <div id="bg"></div>
+    <main>
+      <div id="info-container" data-planet="venus">
+        <h1>Venus</h1>
+        <div class="card text-bg-dark">
+          <img
+            src="assets/venus.jpg"
+            class="card-img-top lark"
+            alt="Picture of Sun"
+            width="375px"
+            height="115px"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Mercury—the smallest planet in our solar system and closest to the
+              Sun—is only slightly larger than Earth's Moon. Mercury is the
+              fastest planet, zipping around the Sun every 88 Earth days.
+            </p>
+          </div>
+        </div>
+        <ul id="features">
+          <li
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-title="Time it takes to orbit the Sun once."
+          >
+            <h3 class="feature">88 EARTH DAYS</h3>
+            <p class="feature-name">Length of Year</p>
+          </li>
+          <li
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-title="AU: Astronomical Unit, the distance between the Earth and the Sun."
+          >
+            <h3 class="feature">0.4 AU</h3>
+            <p class="feature-name">Distance From Sun</p>
+          </li>
+          <li
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-title="Named after mythological figures, planets in our solar system are fascinating celestial bodies that orbit the sun."
+          >
+            <h3 class="feature">ROMAN GOD OF SPEED</h3>
+            <p class="feature-name">Namesake</p>
+          </li>
+          <li
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-title="Number of moons orbiting the planet."
+          >
+            <h3 class="feature">0</h3>
+            <p class="feature-name">Moons</p>
+          </li>
+        </ul>
+
+        <p>
+          AU: Astronomical Unit, the distance between the Earth and the Sun.
+        </p>
+      </div>
+      <div id="canvas"></div>
+    </main>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
